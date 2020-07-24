@@ -1,666 +1,659 @@
-//===========main=============
-@import '../css/normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-}
-
-body {
-    color: #424242;
-}
-
-a {
-    text-decoration: none;
-    outline: none;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #424242;
-}
-
-.header {
-    background-color: #f3f9f3;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.section-outer {
-    display: flex;
-    justify-content: center;
-    .section-inner {
-        width: 1200px;
-        .header-wrapper {
-            padding: 0 15px 0 15px;
-            height: 90px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 30px;
-            //padding: 30px 20px 0px 20px;
-        }
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-around;
-            &__item {
-                padding: 0 10px;
-            }
-
-        }
-        
-        .header-wrapper__number {
-            .number-wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                &__title {
-                    color: #689f38;
-                    font-size: 25px;
-                    font-weight: 600;
-                }
-                &__subtitle {
-                    font-size: 14px;
-                    font-weight: 400;
-                    color: grey;
-                }
-            }
-        }
-    }
-}
-
-.mine-wrapper {
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: url(../src/bg.png) no-repeat 100% 100%;
-}
-
-//===============================mine=======================
-.main {
-    background-color: #f3f9f3;
-}
-
-.mine-wrapper-title {
-    padding-left: 15px;
-    .main-wrapper-title__suptitle {
-        font-size: 30px;
-        font-weight: 600;
-    }
-    .main-wrapper-title__title {
-        color: #689f38;
-        font-size: 60px;
-        font-weight: 600;
-        padding-left: 10px;
-    }
-    .main-wrapper-title__subtitle {
-        font-size: 30px;
-        font-weight: 600;
-        padding-left: 25px;
-    }
-}
-
-.mine-wrapper-button {
-    padding-left: 15px;
-    padding-top: 20px;
-    z-index: 0;
-}
-
-//=============================== advantages =======================
-
-.advantages-wrapper {
-    overflow: auto;
-    height: 770px;
-    padding: 80px 15px;
-    &-head {
-        //padding: 40px 0px;
-        &__title {
-            //padding: 50px 0;
-            font-size: 30px;
-        }
-        &__subtitle {
-            font-size: 50px;
-            font-weight: 600;
-        }
-    }
-    &-content {
-        padding: 0 1px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        &-item {
-            padding: 15px 0;
-            width: 300px;
-            display: flex;
-            align-items: center;
-            &__image {
-                padding: 0 10px;
-            }
-            &__text {
-                font-size: 18px;
-                font-weight: 400;
-            }
-        }
-    }
-}
-
-//=============================== price =======================
-.price {
-    padding: 100px 15px;
-    background-color: #f2f9f2;
-}
-
-.price-head {
-    padding-bottom: 20px;
-    &__title {
-        font-size: 50px;
-        font-weight: 600;
-        line-height: 45px;
-    }
-    &__subtitle {
-        padding-left: 10px;
-        font-size: 30px;
-        font-weight: 400;
-    }
-}
-
-.price-content {
-    display: grid;
-    grid-template-columns: 30% 20% 20% 20%;
-    grid-template-rows: 60px;
-    justify-content: space-around;
-    &__item {
-        .item__head {
-            height: 60px;
-            color: white;
-            background-color: green;
-            text-align: center;
-            border-radius: 10px 10px 0 0;
-            margin: 0 10px;
-            padding-top: 10px;
-        }
-        .item__x-ico {
-            background-color: white;
-            text-align: center;
-            margin: 0 10px;
-            padding: 8px 0;
-            border-radius: 0;
-            box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
-            img {
-                height: 25px;
-                width: 25px;
-            }
-        }
-        .item__v-ico {
-            background-color: white;
-            border-radius: 10px 10px 0 0;
-            text-align: center;
-            margin: 0 10px;
-            padding: 8px 0;
-            border-radius: 0;
-            box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
-            img {
-                height: 25px;
-                width: 25px;
-            }
-        }
-        .item__v-ico--green {
-            box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
-        }
-        .item_text {
-            height: 40px;
-            line-height: 35px;
-            font-size: 16px;
-            font-weight: 400;
-            border-bottom: 1px solid silver;
-        }
-    }
-    .request {
-        margin: 0 10px;
-        padding-top: 10px;
-        height: 60px;
-        text-align: center;
-        color: slategrey;
-        background-color: white;
-        box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
-        border-radius: 0 0 10px 10px;
-    }
-    .request--green {
-        box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
-    }
-}
-
-//=============================== price =======================
-.calc {
-    padding: 100px 15px;
-    background-color: #f2f9f2;
-}
-
-.calc-head {
-    padding-bottom: 60px;
-    &__title {
-        font-size: 50px;
-        font-weight: 600;
-    }
-    &__subtitle {
-        padding-left: 10px;
-        font-size: 30px;
-        font-weight: 400;
-    }
-}
-
-.calc-content {
-    height: 600px;
-    background-color: #fff;
-    box-shadow: 0 0 40px 1px rgb(170, 170, 170);
-    &-items {
-        height: 600px;
-        // padding: 20px 0;
-        display: flex;
-        //justify-content: center;
-        &__form {
-            width: 25%;
-            align-self: stretch;
-            border: 1px solid green;
-            &-head {
-                padding: 10px 10px;
-                color: white;
-                background-color: green;
-            }
-            &-content {
-                padding: 10px 20px;
-                &-wrapper {
-                    .form-content__city-out {
-                        .autocomplete {
-                            //Управление отображением выпадающего списка автокомплита!
-                            &-result-list {
-                                background-color: red;
-                            }
-                        }
-                    }
-                    .form-content__city-in {
-                        padding-top: 50px;
-                    }
-                    .form-content__weight {
-                        .form-content__weight-wrapper {
-                            padding-top: 50px;
-                            display: flex;
-                            justify-content: start;
-                            .form-content__weight-wrapper-inp {}
-                            .form-content__weight-wrapper-desc {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                            }
-                        }
-                    }
-                    .form-content__size {
-                        .form-content__size-wrapper {
-                            padding-top: 50px;
-                            display: flex;
-                            justify-content: start;
-                            text-align: left;
-                            #text {
-                                padding-top: 10px;
-                            }
-                            .form-content__size-wrapper-inp {}
-                            .form-content__size-wrapper-split {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                            }
-                            .form-content__size-wrapper-desc {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                            }
-                        }
-                    }
-                    .form-content__b-sub {
-                        padding-top: 50px;
-                        text-align-last: right;
-                        .form-content__b-sub-btn {}
-                    }
-                }
-            }
-        }
-        &__value {
-            width: 50%;
-            //background-color: yellow;
-            &-wrapper {
-                align-self: stretch;
-                display: flex;
-                height: 100%;
-                .value__conditions {
-                    width: 60%;
-                    //padding-right: 20px;
-                    &-wrapper {
-                        //background-color: orange;
-                        align-self: center;
-                        height: 600px;
-                        &-head {
-                            padding: 10px 10px;
-                            text-align: left;
-                        }
-                        &-item {
-                            //background-color: orchid;
-                            text-align: center;
-                            display: flex;
-                            border-top: 1px solid rgb(212, 212, 212);
-                            &-left {
-                                //background-color: plum;
-                                width: 50%;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                text-align: left;
-                                padding-left: 20px;
-                            }
-                            &-right {
-                                width: 50%;
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                &-option {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: space-around;
-                                    //background-color: saddlebrown;
-                                    height: 53px;
-                                    text-align: left;
-                                    padding-left: 30px;
-                                    //border-top: 1px solid grey;
-                                }
-                                &-option--grey {
-                                    background-color: rgb(247, 247, 247);
-                                }
-                            }
-                        }
-                    }
-                }
-                .value__result {
-                    align-self: stretch;
-                    box-shadow: 0 0 40px 1px rgb(170, 170, 170);
-                    width: 35%;
-                    &-wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        height: 600px;
-                        .result__head {
-                            padding: 10px 10px;
-                            color: white;
-                            background-color: green;
-                        }
-                        .result__value {
-                            height: 56px;
-                            padding: 15px 0;
-                            //line-height: 23px;
-                            // font-size: 18px;
-                            text-align: center;
-                            border-top: 1px solid rgb(212, 212, 212);
-                        }
-                    }
-                }
-            }
-        }
-        &__desc {
-            width: 35%;
-            align-self: stretch;
-            padding: 30px 20px;
-            &-wrapper {
-                padding: 10px 0px;
-                .desc__item {
-                    padding: 25px 0px;
-                    display: flex;
-                    &-image {
-                        padding-right: 10px;
-                    }
-                    &-content {
-                        &-title {}
-                        &-subtitle {}
-                    }
-                }
-            }
-        }
-    }
-}
-
-//=============================== evidence =======================
-.evidence {
-    padding: 100px 15px;
-    &-head {
-        //padding-bottom: 60px;
-        &__title {
-            font-size: 50px;
-            font-weight: 600;
-            line-height: 45px;
-        }
-        &__subtitle {
-            padding-left: 10px;
-            font-size: 30px;
-            font-weight: 400;
-        }
-    }
-    &-content {
-        height: 600px;
-        //background-color: #424242;
-        &-wrapper {
-            height: 600px;
-            display: flex;
-            justify-content: space-around;
-            align-items: stretch;
-            &__item1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                bottom: 0;
-                //background-color: tomato;
-                width: 20%;
-                &-head {
-                    padding-top: 250px;
-                    text-align: center;
-                    &-title {
-                        color: green;
-                        font-size: 50px;
-                        font-weight: 600;
-                        line-height: 60px;
-                    }
-                    &-subtitle {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 20px;
-                        padding-bottom: 10px;
-                    }
-                }
-                &-body1 {
-                    
-                    background-color: yellowgreen;
-                    opacity: 0.3; //padding-top: 200px;
-                    height: 100%;
-                    width: 140px;
-                }
-
-            }
-            &__item2 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                bottom: 0;
-                //background-color: tomato;
-                width: 20%;
-                &-head {
-                    padding-top: 150px;
-                    text-align: center;
-                    &-title {
-                        color: green;
-                        font-size: 50px;
-                        font-weight: 600;
-                        line-height: 50px;
-                    }
-                    &-subtitle {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 20px;
-                        padding-bottom: 10px;
-                    }
-                }
-                &-body2 {
-                    background-color: yellowgreen;
-                    opacity: 0.3; //padding-top: 200px;
-                    height: 100%;
-                    width: 140px;
-                }
-
-            }
-            &__item3 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                bottom: 0;
-                //background-color: tomato;
-                width: 20%;
-                &-head {
-                    padding-top: 57px;
-                    text-align: center;
-                    &-title {
-                        color: green;
-                        font-size: 50px;
-                        font-weight: 600;
-                        line-height: 50px;
-                    }
-                    &-subtitle {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 20px;
-                        padding-bottom: 10px;
-                    }
-                }
-                &-body3 {
-                    background-color: yellowgreen;
-                    opacity: 0.3; //padding-top: 200px;
-                    height: 100%;
-                    width: 140px;
-                }
-
-            }
-            &__item4 {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                //background-color: tomato;
-                width: 20%;
-                &-head {
-                    padding-top: 130px;
-                    text-align: center;
-                    &-title {
-                        color: green;
-                        font-size: 50px;
-                        font-weight: 600;
-                        line-height: 60px;
-                    }
-                    &-subtitle {
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 20px;
-                        padding-bottom: 10px;
-                    }
-                }
-                &-body4 {
-                    
-                    background-color: yellowgreen;
-                    opacity: 0.3; //padding-top: 200px;
-                    height: 100%;
-                    width: 140px;
-                }
-
-            }
-        }
-    }
-}
-.partners{
-    height: 400px;
-    &-head{
-        &__title{
-            text-align: center;
-            font-size: 50px;
-            font-weight: 600;
-            line-height: 45px;
-            color: green;
-            padding-bottom: 50px;
-        }
-    }
-    &-content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &-wrapper{
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 100px 100px;
-            //justify-content: space-around;
-
-            &__item{
-                padding: 10px;
-            }
-                
-            }
-        }  
-    }
-    .partners-content__send-massage{
-        padding-top: 50px;
-        &-btn{
-
-        }
-    }
-
-
-    .footer{
-        height: 200px;
-        &-top{
-            &-wrapper{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                &__item{
-                    &--coll{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    &-policy{
-                        text-align: center;
-                    }
-                    .number-wrapper{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                }
-            }
-        }
-        &-content{
-            display: flex;
-            justify-content: center;
-            &__text{
-                width: 800px;
-                text-align: center;
-            }
-        }
-    }
-
-//===========================adaptive====================================
-@media screen and (min-width: 1060px) {
-
-    .nav-wrapper--sm{
-        display: flex;
-    }
-  }
+                                                    //===========main=============
+                                                    @import '../css/normalize.css';
+                                                    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+                                                    * {
+                                                        padding: 0;
+                                                        margin: 0;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Roboto', sans-serif;
+                                                        scroll-behavior: smooth;
+                                                    }
+                                                    
+                                                    body {
+                                                        color: #424242;
+                                                    }
+                                                    
+                                                    a {
+                                                        text-decoration: none;
+                                                        outline: none;
+                                                        font-size: 14px;
+                                                        font-weight: 600;
+                                                        text-transform: uppercase;
+                                                        color: #424242;
+                                                    }
+                                                    
+                                                    .header {
+                                                        background-color: #f3f9f3;
+                                                        position: sticky;
+                                                        top: 0;
+                                                        z-index: 50;
+                                                    }
+                                                    
+                                                    .section-outer {
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        .section-inner {
+                                                            width: 1200px;
+                                                            .header-wrapper {
+                                                                padding: 0 15px 0 15px;
+                                                                height: 90px;
+                                                                display: flex;
+                                                                justify-content: space-between;
+                                                                align-items: center;
+                                                                padding-top: 30px;
+                                                                //padding: 30px 20px 0px 20px;
+                                                            }
+                                                            .nav-wrapper {
+                                                                display: flex;
+                                                                justify-content: space-around;
+                                                                &__item {
+                                                                    padding: 0 10px;
+                                                                }
+                                                            }
+                                                            .nav-wrapper-sm {
+                                                                display: none;
+                                                                &__item {}
+                                                            }
+                                                            .header-wrapper__number {
+                                                                .number-wrapper {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    &__title {
+                                                                        color: #689f38;
+                                                                        font-size: 25px;
+                                                                        font-weight: 600;
+                                                                    }
+                                                                    &__subtitle {
+                                                                        font-size: 14px;
+                                                                        font-weight: 400;
+                                                                        color: grey;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    .mine-wrapper {
+                                                        height: 600px;
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: flex-start;
+                                                        background: url(../src/bg.png) no-repeat 100% 100%;
+                                                    }
+                                                    
+                                                    //===============================mine=======================
+                                                    .main {
+                                                        background-color: #f3f9f3;
+                                                    }
+                                                    
+                                                    .mine-wrapper-title {
+                                                        padding-left: 15px;
+                                                        .main-wrapper-title__suptitle {
+                                                            font-size: 30px;
+                                                            font-weight: 600;
+                                                        }
+                                                        .main-wrapper-title__title {
+                                                            color: #689f38;
+                                                            font-size: 60px;
+                                                            font-weight: 600;
+                                                            padding-left: 10px;
+                                                        }
+                                                        .main-wrapper-title__subtitle {
+                                                            font-size: 30px;
+                                                            font-weight: 600;
+                                                            padding-left: 25px;
+                                                        }
+                                                    }
+                                                    
+                                                    .mine-wrapper-button {
+                                                        padding-left: 15px;
+                                                        padding-top: 20px;
+                                                        z-index: 0;
+                                                    }
+                                                    
+                                                    //=============================== advantages =======================
+                                                    .advantages-wrapper {
+                                                        overflow: auto;
+                                                        height: 770px;
+                                                        padding: 80px 15px;
+                                                        &-head {
+                                                            //padding: 40px 0px;
+                                                            &__title {
+                                                                //padding: 50px 0;
+                                                                font-size: 30px;
+                                                            }
+                                                            &__subtitle {
+                                                                font-size: 50px;
+                                                                font-weight: 600;
+                                                            }
+                                                        }
+                                                        &-content {
+                                                            padding: 0 1px;
+                                                            display: flex;
+                                                            justify-content: space-between;
+                                                            flex-wrap: wrap;
+                                                            &-item {
+                                                                padding: 15px 0;
+                                                                width: 300px;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                &__image {
+                                                                    padding: 0 10px;
+                                                                }
+                                                                &__text {
+                                                                    font-size: 18px;
+                                                                    font-weight: 400;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    //=============================== price =======================
+                                                    .price {
+                                                        padding: 100px 15px;
+                                                        background-color: #f2f9f2;
+                                                    }
+                                                    
+                                                    .price-head {
+                                                        padding-bottom: 20px;
+                                                        &__title {
+                                                            font-size: 50px;
+                                                            font-weight: 600;
+                                                            line-height: 45px;
+                                                        }
+                                                        &__subtitle {
+                                                            padding-left: 10px;
+                                                            font-size: 30px;
+                                                            font-weight: 400;
+                                                        }
+                                                    }
+                                                    
+                                                    .price-content {
+                                                        display: grid;
+                                                        grid-template-columns: 30% 20% 20% 20%;
+                                                        grid-template-rows: 60px;
+                                                        justify-content: space-around;
+                                                        &__item {
+                                                            .item__head {
+                                                                height: 60px;
+                                                                color: white;
+                                                                background-color: green;
+                                                                text-align: center;
+                                                                border-radius: 10px 10px 0 0;
+                                                                margin: 0 10px;
+                                                                padding-top: 10px;
+                                                            }
+                                                            .item__x-ico {
+                                                                background-color: white;
+                                                                text-align: center;
+                                                                margin: 0 10px;
+                                                                padding: 8px 0;
+                                                                border-radius: 0;
+                                                                box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                                img {
+                                                                    height: 25px;
+                                                                    width: 25px;
+                                                                }
+                                                            }
+                                                            .item__v-ico {
+                                                                background-color: white;
+                                                                border-radius: 10px 10px 0 0;
+                                                                text-align: center;
+                                                                margin: 0 10px;
+                                                                padding: 8px 0;
+                                                                border-radius: 0;
+                                                                box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                                img {
+                                                                    height: 25px;
+                                                                    width: 25px;
+                                                                }
+                                                            }
+                                                            .item__v-ico--green {
+                                                                box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
+                                                            }
+                                                            .item_text {
+                                                                height: 40px;
+                                                                line-height: 35px;
+                                                                font-size: 16px;
+                                                                font-weight: 400;
+                                                                border-bottom: 1px solid silver;
+                                                            }
+                                                        }
+                                                        .request {
+                                                            margin: 0 10px;
+                                                            padding-top: 10px;
+                                                            height: 60px;
+                                                            text-align: center;
+                                                            color: slategrey;
+                                                            background-color: white;
+                                                            box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                            border-radius: 0 0 10px 10px;
+                                                        }
+                                                        .request--green {
+                                                            box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
+                                                        }
+                                                    }
+                                                    
+                                                    //=============================== price =======================
+                                                    .calc {
+                                                        padding: 100px 15px;
+                                                        background-color: #f2f9f2;
+                                                    }
+                                                    
+                                                    .calc-head {
+                                                        padding-bottom: 60px;
+                                                        &__title {
+                                                            font-size: 50px;
+                                                            font-weight: 600;
+                                                        }
+                                                        &__subtitle {
+                                                            padding-left: 10px;
+                                                            font-size: 30px;
+                                                            font-weight: 400;
+                                                        }
+                                                    }
+                                                    
+                                                    .calc-content {
+                                                        height: 600px;
+                                                        background-color: #fff;
+                                                        box-shadow: 0 0 40px 1px rgb(170, 170, 170);
+                                                        &-items {
+                                                            height: 600px;
+                                                            // padding: 20px 0;
+                                                            display: flex;
+                                                            //justify-content: center;
+                                                            &__form {
+                                                                width: 25%;
+                                                                align-self: stretch;
+                                                                border: 1px solid green;
+                                                                &-head {
+                                                                    padding: 10px 10px;
+                                                                    color: white;
+                                                                    background-color: green;
+                                                                }
+                                                                &-content {
+                                                                    padding: 10px 20px;
+                                                                    &-wrapper {
+                                                                        .form-content__city-out {
+                                                                            .autocomplete {
+                                                                                //Управление отображением выпадающего списка автокомплита!
+                                                                                &-result-list {
+                                                                                    background-color: red;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        .form-content__city-in {
+                                                                            padding-top: 50px;
+                                                                        }
+                                                                        .form-content__weight {
+                                                                            .form-content__weight-wrapper {
+                                                                                padding-top: 50px;
+                                                                                display: flex;
+                                                                                justify-content: start;
+                                                                                .form-content__weight-wrapper-inp {}
+                                                                                .form-content__weight-wrapper-desc {
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        .form-content__size {
+                                                                            .form-content__size-wrapper {
+                                                                                padding-top: 50px;
+                                                                                display: flex;
+                                                                                justify-content: start;
+                                                                                text-align: left;
+                                                                                #text {
+                                                                                    padding-top: 10px;
+                                                                                }
+                                                                                .form-content__size-wrapper-inp {}
+                                                                                .form-content__size-wrapper-split {
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center;
+                                                                                }
+                                                                                .form-content__size-wrapper-desc {
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                        .form-content__b-sub {
+                                                                            padding-top: 50px;
+                                                                            text-align-last: right;
+                                                                            .form-content__b-sub-btn {}
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &__value {
+                                                                width: 50%;
+                                                                //background-color: yellow;
+                                                                &-wrapper {
+                                                                    align-self: stretch;
+                                                                    display: flex;
+                                                                    height: 100%;
+                                                                    .value__conditions {
+                                                                        width: 60%;
+                                                                        //padding-right: 20px;
+                                                                        &-wrapper {
+                                                                            //background-color: orange;
+                                                                            align-self: center;
+                                                                            height: 600px;
+                                                                            &-head {
+                                                                                padding: 10px 10px;
+                                                                                text-align: left;
+                                                                            }
+                                                                            &-item {
+                                                                                //background-color: orchid;
+                                                                                text-align: center;
+                                                                                display: flex;
+                                                                                border-top: 1px solid rgb(212, 212, 212);
+                                                                                &-left {
+                                                                                    //background-color: plum;
+                                                                                    width: 50%;
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center;
+                                                                                    text-align: left;
+                                                                                    padding-left: 20px;
+                                                                                }
+                                                                                &-right {
+                                                                                    width: 50%;
+                                                                                    display: flex;
+                                                                                    flex-direction: column;
+                                                                                    justify-content: center;
+                                                                                    &-option {
+                                                                                        display: flex;
+                                                                                        flex-direction: column;
+                                                                                        justify-content: space-around;
+                                                                                        //background-color: saddlebrown;
+                                                                                        height: 53px;
+                                                                                        text-align: left;
+                                                                                        padding-left: 30px;
+                                                                                        //border-top: 1px solid grey;
+                                                                                    }
+                                                                                    &-option--grey {
+                                                                                        background-color: rgb(247, 247, 247);
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .value__result {
+                                                                        align-self: stretch;
+                                                                        box-shadow: 0 0 40px 1px rgb(170, 170, 170);
+                                                                        width: 35%;
+                                                                        &-wrapper {
+                                                                            display: flex;
+                                                                            flex-direction: column;
+                                                                            justify-content: space-between;
+                                                                            height: 600px;
+                                                                            .result__head {
+                                                                                padding: 10px 10px;
+                                                                                color: white;
+                                                                                background-color: green;
+                                                                            }
+                                                                            .result__value {
+                                                                                height: 56px;
+                                                                                padding: 15px 0;
+                                                                                //line-height: 23px;
+                                                                                // font-size: 18px;
+                                                                                text-align: center;
+                                                                                border-top: 1px solid rgb(212, 212, 212);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &__desc {
+                                                                width: 35%;
+                                                                align-self: stretch;
+                                                                padding: 30px 20px;
+                                                                &-wrapper {
+                                                                    padding: 10px 0px;
+                                                                    .desc__item {
+                                                                        padding: 25px 0px;
+                                                                        display: flex;
+                                                                        &-image {
+                                                                            padding-right: 10px;
+                                                                        }
+                                                                        &-content {
+                                                                            &-title {}
+                                                                            &-subtitle {}
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    //=============================== evidence =======================
+                                                    .evidence {
+                                                        padding: 100px 15px;
+                                                        &-head {
+                                                            //padding-bottom: 60px;
+                                                            &__title {
+                                                                font-size: 50px;
+                                                                font-weight: 600;
+                                                                line-height: 45px;
+                                                            }
+                                                            &__subtitle {
+                                                                padding-left: 10px;
+                                                                font-size: 30px;
+                                                                font-weight: 400;
+                                                            }
+                                                        }
+                                                        &-content {
+                                                            height: 600px;
+                                                            //background-color: #424242;
+                                                            &-wrapper {
+                                                                height: 600px;
+                                                                display: flex;
+                                                                justify-content: space-around;
+                                                                align-items: stretch;
+                                                                &__item1 {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    bottom: 0;
+                                                                    //background-color: tomato;
+                                                                    width: 20%;
+                                                                    &-head {
+                                                                        padding-top: 250px;
+                                                                        text-align: center;
+                                                                        &-title {
+                                                                            color: green;
+                                                                            font-size: 50px;
+                                                                            font-weight: 600;
+                                                                            line-height: 60px;
+                                                                        }
+                                                                        &-subtitle {
+                                                                            font-size: 18px;
+                                                                            font-weight: 400;
+                                                                            line-height: 20px;
+                                                                            padding-bottom: 10px;
+                                                                        }
+                                                                    }
+                                                                    &-body1 {
+                                                                        background-color: yellowgreen;
+                                                                        opacity: 0.3; //padding-top: 200px;
+                                                                        height: 100%;
+                                                                        width: 140px;
+                                                                    }
+                                                                }
+                                                                &__item2 {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    bottom: 0;
+                                                                    //background-color: tomato;
+                                                                    width: 20%;
+                                                                    &-head {
+                                                                        padding-top: 150px;
+                                                                        text-align: center;
+                                                                        &-title {
+                                                                            color: green;
+                                                                            font-size: 50px;
+                                                                            font-weight: 600;
+                                                                            line-height: 50px;
+                                                                        }
+                                                                        &-subtitle {
+                                                                            font-size: 18px;
+                                                                            font-weight: 400;
+                                                                            line-height: 20px;
+                                                                            padding-bottom: 10px;
+                                                                        }
+                                                                    }
+                                                                    &-body2 {
+                                                                        background-color: yellowgreen;
+                                                                        opacity: 0.3; //padding-top: 200px;
+                                                                        height: 100%;
+                                                                        width: 140px;
+                                                                    }
+                                                                }
+                                                                &__item3 {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    bottom: 0;
+                                                                    //background-color: tomato;
+                                                                    width: 20%;
+                                                                    &-head {
+                                                                        padding-top: 57px;
+                                                                        text-align: center;
+                                                                        &-title {
+                                                                            color: green;
+                                                                            font-size: 50px;
+                                                                            font-weight: 600;
+                                                                            line-height: 50px;
+                                                                        }
+                                                                        &-subtitle {
+                                                                            font-size: 18px;
+                                                                            font-weight: 400;
+                                                                            line-height: 20px;
+                                                                            padding-bottom: 10px;
+                                                                        }
+                                                                    }
+                                                                    &-body3 {
+                                                                        background-color: yellowgreen;
+                                                                        opacity: 0.3; //padding-top: 200px;
+                                                                        height: 100%;
+                                                                        width: 140px;
+                                                                    }
+                                                                }
+                                                                &__item4 {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    //background-color: tomato;
+                                                                    width: 20%;
+                                                                    &-head {
+                                                                        padding-top: 130px;
+                                                                        text-align: center;
+                                                                        &-title {
+                                                                            color: green;
+                                                                            font-size: 50px;
+                                                                            font-weight: 600;
+                                                                            line-height: 60px;
+                                                                        }
+                                                                        &-subtitle {
+                                                                            font-size: 18px;
+                                                                            font-weight: 400;
+                                                                            line-height: 20px;
+                                                                            padding-bottom: 10px;
+                                                                        }
+                                                                    }
+                                                                    &-body4 {
+                                                                        background-color: yellowgreen;
+                                                                        opacity: 0.3; //padding-top: 200px;
+                                                                        height: 100%;
+                                                                        width: 140px;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    .partners {
+                                                        height: 400px;
+                                                        &-head {
+                                                            &__title {
+                                                                text-align: center;
+                                                                font-size: 50px;
+                                                                font-weight: 600;
+                                                                line-height: 45px;
+                                                                color: green;
+                                                                padding-bottom: 50px;
+                                                            }
+                                                        }
+                                                        &-content {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            align-items: center;
+                                                            &-wrapper {
+                                                                display: grid;
+                                                                grid-template-columns: 25% 25% 25% 25%;
+                                                                grid-template-rows: 100px 100px;
+                                                                //justify-content: space-around;
+                                                                &__item {
+                                                                    padding: 10px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    .partners-content__send-massage {
+                                                        padding-top: 50px;
+                                                        &-btn {}
+                                                    }
+                                                    
+                                                    .footer {
+                                                        height: 200px;
+                                                        &-top {
+                                                            &-wrapper {
+                                                                display: flex;
+                                                                justify-content: space-around;
+                                                                align-items: center;
+                                                                &__item {
+                                                                    &--coll {
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                    }
+                                                                    &-policy {
+                                                                        text-align: center;
+                                                                    }
+                                                                    .number-wrapper {
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        &-content {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            &__text {
+                                                                width: 800px;
+                                                                text-align: center;
+                                                            }
+                                                        }
+                                                    }
+                                                    
+                                                    //===========================adaptive====================================
+                                                    @media only screen and (max-width: 1075px) {
+                                                        .nav-wrapper {
+                                                            display: none !important;
+                                                        }
+                                                        .nav-wrapper-sm {
+                                                            display: flex !important;
+                                                        }
+                                                    }
