@@ -16,7 +16,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #424242; }
+  color: #424242 !important; }
 
 .header {
   background-color: #f3f9f3;
@@ -203,7 +203,7 @@ a {
     height: 600px;
     display: flex; }
     .calc-content-items__form {
-      width: 25%;
+      width: 30%;
       align-self: stretch;
       border: 1px solid green; }
       .calc-content-items__form-head {
@@ -212,23 +212,28 @@ a {
         background-color: green; }
       .calc-content-items__form-content {
         padding: 10px 20px; }
-        .calc-content-items__form-content-wrapper .form-content__city-out .autocomplete-result-list {
-          background-color: red; }
         .calc-content-items__form-content-wrapper .form-content__city-in {
           padding-top: 50px; }
         .calc-content-items__form-content-wrapper .form-content__weight .form-content__weight-wrapper {
           padding-top: 50px;
           display: flex;
+          flex-direction: column;
           justify-content: start; }
           .calc-content-items__form-content-wrapper .form-content__weight .form-content__weight-wrapper .form-content__weight-wrapper-desc {
             display: flex;
             flex-direction: column;
             justify-content: center; }
         .calc-content-items__form-content-wrapper .form-content__size .form-content__size-wrapper {
-          padding-top: 50px;
+          padding-top: 30px;
           display: flex;
+          flex-direction: column;
           justify-content: start;
           text-align: left; }
+          .calc-content-items__form-content-wrapper .form-content__size .form-content__size-wrapper-wrap {
+            padding-top: 5px;
+            display: flex;
+            justify-content: start;
+            text-align: left; }
           .calc-content-items__form-content-wrapper .form-content__size .form-content__size-wrapper #text {
             padding-top: 10px; }
           .calc-content-items__form-content-wrapper .form-content__size .form-content__size-wrapper .form-content__size-wrapper-split {
@@ -276,9 +281,9 @@ a {
                   display: flex;
                   flex-direction: column;
                   justify-content: space-around;
-                  height: 53px;
+                  height: 3.3em;
                   text-align: left;
-                  padding-left: 30px; }
+                  padding-left: 20px; }
                 .calc-content-items__value-wrapper .value__conditions-wrapper-item-right-option--grey {
                   background-color: #f7f7f7; }
         .calc-content-items__value-wrapper .value__result {
@@ -295,21 +300,31 @@ a {
               color: white;
               background-color: green; }
             .calc-content-items__value-wrapper .value__result-wrapper .result__value {
-              height: 56px;
-              padding: 15px 0;
+              height: 53px;
+              padding: 14px 0;
               text-align: center;
               border-top: 1px solid #d4d4d4; }
     .calc-content-items__desc {
-      width: 35%;
+      width: 30%;
       align-self: stretch;
       padding: 30px 20px; }
       .calc-content-items__desc-wrapper {
         padding: 10px 0px; }
         .calc-content-items__desc-wrapper .desc__item {
-          padding: 25px 0px;
+          padding: 15px 0px;
           display: flex; }
+          .calc-content-items__desc-wrapper .desc__item--star {
+            font-size: 12px; }
           .calc-content-items__desc-wrapper .desc__item-image {
             padding-right: 10px; }
+          .calc-content-items__desc-wrapper .desc__item-content-title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 40px; }
+          .calc-content-items__desc-wrapper .desc__item-content-subtitle {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25px; }
 
 .evidence {
   padding: 100px 15px; }

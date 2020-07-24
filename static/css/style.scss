@@ -19,7 +19,7 @@
                                                         font-size: 14px;
                                                         font-weight: 600;
                                                         text-transform: uppercase;
-                                                        color: #424242;
+                                                        color: #424242 !important;
                                                     }
                                                     
                                                     .header {
@@ -261,11 +261,11 @@
                                                         box-shadow: 0 0 40px 1px rgb(170, 170, 170);
                                                         &-items {
                                                             height: 600px;
-                                                            // padding: 20px 0;
+                                                            
                                                             display: flex;
                                                             //justify-content: center;
                                                             &__form {
-                                                                width: 25%;
+                                                                width: 30%;
                                                                 align-self: stretch;
                                                                 border: 1px solid green;
                                                                 &-head {
@@ -277,12 +277,7 @@
                                                                     padding: 10px 20px;
                                                                     &-wrapper {
                                                                         .form-content__city-out {
-                                                                            .autocomplete {
-                                                                                //Управление отображением выпадающего списка автокомплита!
-                                                                                &-result-list {
-                                                                                    background-color: red;
-                                                                                }
-                                                                            }
+                                                                            
                                                                         }
                                                                         .form-content__city-in {
                                                                             padding-top: 50px;
@@ -291,6 +286,7 @@
                                                                             .form-content__weight-wrapper {
                                                                                 padding-top: 50px;
                                                                                 display: flex;
+                                                                                flex-direction: column;
                                                                                 justify-content: start;
                                                                                 .form-content__weight-wrapper-inp {}
                                                                                 .form-content__weight-wrapper-desc {
@@ -301,11 +297,21 @@
                                                                             }
                                                                         }
                                                                         .form-content__size {
+
                                                                             .form-content__size-wrapper {
-                                                                                padding-top: 50px;
+                                                                                padding-top: 30px;
                                                                                 display: flex;
+                                                                                flex-direction: column;
                                                                                 justify-content: start;
                                                                                 text-align: left;
+
+                                                                                &-wrap{
+                                                                                    padding-top: 5px;
+                                                                                    display: flex;
+                                                                                    
+                                                                                    justify-content: start;
+                                                                                    text-align: left;
+                                                                                }
                                                                                 #text {
                                                                                     padding-top: 10px;
                                                                                 }
@@ -332,15 +338,19 @@
                                                             }
                                                             &__value {
                                                                 width: 50%;
+                                                                
                                                                 //background-color: yellow;
                                                                 &-wrapper {
+                                                                    
                                                                     align-self: stretch;
                                                                     display: flex;
-                                                                    height: 100%;
+                                                                    
+                                                                     height: 100%;
                                                                     .value__conditions {
                                                                         width: 60%;
                                                                         //padding-right: 20px;
                                                                         &-wrapper {
+                                    
                                                                             //background-color: orange;
                                                                             align-self: center;
                                                                             height: 600px;
@@ -350,6 +360,7 @@
                                                                             }
                                                                             &-item {
                                                                                 //background-color: orchid;
+                                                                                
                                                                                 text-align: center;
                                                                                 display: flex;
                                                                                 border-top: 1px solid rgb(212, 212, 212);
@@ -372,9 +383,10 @@
                                                                                         flex-direction: column;
                                                                                         justify-content: space-around;
                                                                                         //background-color: saddlebrown;
-                                                                                        height: 53px;
+                                                                                        height: 3.3em;
                                                                                         text-align: left;
-                                                                                        padding-left: 30px;
+                                                                                        padding-left: 20px;
+                                                                                        
                                                                                         //border-top: 1px solid grey;
                                                                                     }
                                                                                     &-option--grey {
@@ -399,9 +411,9 @@
                                                                                 background-color: green;
                                                                             }
                                                                             .result__value {
-                                                                                height: 56px;
-                                                                                padding: 15px 0;
-                                                                                //line-height: 23px;
+                                                                                height: 53px;
+                                                                                padding: 14px 0;
+                                                                                // line-height: 23px;
                                                                                 // font-size: 18px;
                                                                                 text-align: center;
                                                                                 border-top: 1px solid rgb(212, 212, 212);
@@ -411,20 +423,31 @@
                                                                 }
                                                             }
                                                             &__desc {
-                                                                width: 35%;
+                                                                width: 30%;
                                                                 align-self: stretch;
                                                                 padding: 30px 20px;
                                                                 &-wrapper {
                                                                     padding: 10px 0px;
                                                                     .desc__item {
-                                                                        padding: 25px 0px;
+                                                                        padding: 15px 0px;
                                                                         display: flex;
+                                                                        &--star{
+                                                                            font-size: 12px;
+                                                                        }
                                                                         &-image {
                                                                             padding-right: 10px;
                                                                         }
                                                                         &-content {
-                                                                            &-title {}
-                                                                            &-subtitle {}
+                                                                            &-title {
+                                                                                font-size: 18px;
+                                                                                font-weight: 600;
+                                                                                line-height: 40px;
+                                                                            }
+                                                                            &-subtitle {
+                                                                                font-size: 14px;
+                                                                                font-weight: 300;
+                                                                                line-height: 25px;
+                                                                            }
                                                                         }
                                                                     }
                                                                 }

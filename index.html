@@ -32,9 +32,9 @@
 
                         <div class="nav-wrapper-sm dropdown">
 
-                            <button class='btn btn-secondary dropdown-toggle' type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop Me!</button>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop Me!</button>
 
-                            <div id="dropdown" class="dropdown-content">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <div class="nav-wrapper-sm__item dropdown-item"><a href="#">"Посылка"</a></div>
                                 <div class="nav-wrapper-sm__item dropdown-item"><a href="#menu_advantages">Преимущества</a></div>
                                 <div class="nav-wrapper-sm__item dropdown-item"><a href="#menu_price">Тарифы</a></div>
@@ -43,11 +43,6 @@
                                 <div class="nav-wrapper-sm__item dropdown-item"><a href="#menu_partners">Партнеры</a></div>
                             </div>
 
-                            <ul class="dds">
-                                <li><a class="dropdown-trigger" data-target="dropdown">
-                                    Dropdown <i class="material-icons">arrow_drop_down</i></a>
-                                </li>
-                            </ul>
                         </div>
 
 
@@ -338,7 +333,7 @@
                                                 placeholder="Введите город"
                                                 aria-label="Search for a country"                                            
                                             ></autocomplete> -->
-                                            <input name="city_out" type="text" placeholder="Введите город">
+                                            <input name="city_out" class="form-control" type="text" placeholder="Введите город">
                                         </div>
 
                                         <div class="form-content__city-in">
@@ -352,32 +347,65 @@
                                                 aria-label="Search for a country"                                            
                                             ></autocomplete>  
                                                                                    -->
-                                            <input name="city_in" type="text" placeholder="Введите город">
+                                            <input name="city_in" type="text" class="form-control" placeholder="Введите город">
                                         </div>
 
                                         <div class="form-content__weight">
+                                            
                                             <div class="form-content__weight-wrapper">
 
                                                 <label for="weight">Вес:</label>
-                                                <input name="weight" v-model="sending.weight" type="text" class="form-content__weight-wrapper-inp">
 
-                                                <div class="form-content__weight-wrapper-desc">кг</div>
+                                                <div class="input-group">
+                                                    <input name="weight" class="form-control" type="text" class="form-content__weight-wrapper-inp">
+
+                                                    <div class="form-content__weight-wrapper-desc input-group-append">
+                                                        <span class="input-group-text">кг</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="form-content__size">
+
+                                        <div class="form-content__size ">
+
                                             <div class="form-content__size-wrapper">
 
                                                 <label for="size-w">Габариты:</label>
-                                                <input name="size-w" v-model="sending.sizeW" type="text" class="form-content__size-wrapper-inp">
 
-                                                <div class="form-content__size-wrapper-split">x</div>
-                                                <input name="size-h" v-model="sending.sizeH" type="text" class="form-content__size-wrapper-inp">
+                                                <div class="form-content__size-wrapper-wrap input-group">
 
-                                                <div class="form-content__size-wrapper-split">x</div>
-                                                <input name="size-d" v-model="sending.sizeD" type="text" class="form-content__size-wrapper-inp">
-                                                <div class="form-content__size-wrapper-desc">см</div>
+                                                <input name="size-w" class="form-control" type="text" class="form-content__size-wrapper-inp">
+
+                                                <div class="form-content__size-wrapper-split input-group-prepend">
+                                                    <span class="input-group-text">x</span>
+                                                </div>
+
+                                                <input name="size-h" class="form-control" type="text" class="form-content__size-wrapper-inp">
+
+                                                <div class="form-content__size-wrapper-split input-group-prepend">
+                                                    <span class="input-group-text">x</span>
+                                                </div>
+                                                
+                                                <input name="size-d" class="form-control" type="text" class="form-content__size-wrapper-inp">
+                                                
+                                                <div class="form-content__size-wrapper-desc input-group-append">
+                                                    <span class="input-group-text">см</span>
+                                                </div>
+                                            </div>
+
                                             </div>
                                         </div>
+
+                                        <!-- <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                            <div class="input-group-append">
+                                              <span class="input-group-text">.00</span>
+                                            </div>
+                                          </div> -->
+
                                         <div class="form-content__b-sub">
                                             <input type="submit" class=" form-content__b-sub-btn btn btn-success" value="Рассчитать">
                                         </div>
@@ -482,7 +510,7 @@
                                         <div class="desc__item-content-subtitle ">Доставка от вашего офиса до двери покупателя</div>
                                     </div>
                                 </div>
-                                <div class="desc__item ">* Отправка от вашего офиса считается <br> отправкой от склада, если оформлен<br> "забор со склада "</div>
+                                <div class="desc__item--star ">* Отправка от вашего офиса считается <br> отправкой от склада, если оформлен<br> "забор со склада "</div>
                             </div>
                         </div>
                     </div>
