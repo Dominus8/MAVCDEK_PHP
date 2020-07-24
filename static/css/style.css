@@ -31,6 +31,7 @@ a {
   .section-outer .section-inner {
     width: 1200px; }
     .section-outer .section-inner .header-wrapper {
+      padding: 0 15px 0 15px;
       height: 90px;
       display: flex;
       justify-content: space-between;
@@ -65,29 +66,30 @@ a {
 .main {
   background-color: #f3f9f3; }
 
-.mine-wrapper-title .main-wrapper-title__suptitle {
-  font-size: 30px;
-  font-weight: 600; }
-
-.mine-wrapper-title .main-wrapper-title__title {
-  color: #689f38;
-  font-size: 60px;
-  font-weight: 600;
-  padding-left: 10px; }
-
-.mine-wrapper-title .main-wrapper-title__subtitle {
-  font-size: 30px;
-  font-weight: 600;
-  padding-left: 25px; }
+.mine-wrapper-title {
+  padding-left: 15px; }
+  .mine-wrapper-title .main-wrapper-title__suptitle {
+    font-size: 30px;
+    font-weight: 600; }
+  .mine-wrapper-title .main-wrapper-title__title {
+    color: #689f38;
+    font-size: 60px;
+    font-weight: 600;
+    padding-left: 10px; }
+  .mine-wrapper-title .main-wrapper-title__subtitle {
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 25px; }
 
 .mine-wrapper-button {
+  padding-left: 15px;
   padding-top: 20px;
   z-index: 0; }
 
 .advantages-wrapper {
   overflow: auto;
   height: 770px;
-  padding: 80px 0; }
+  padding: 80px 15px; }
   .advantages-wrapper-head__title {
     font-size: 30px; }
   .advantages-wrapper-head__subtitle {
@@ -110,7 +112,7 @@ a {
         font-weight: 400; }
 
 .price {
-  padding: 100px 0;
+  padding: 100px 15px;
   background-color: #f2f9f2; }
 
 .price-head {
@@ -179,7 +181,7 @@ a {
     box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset; }
 
 .calc {
-  padding: 100px 0;
+  padding: 100px 15px;
   background-color: #f2f9f2; }
 
 .calc-head {
@@ -309,7 +311,7 @@ a {
             padding-right: 10px; }
 
 .evidence {
-  padding: 100px 0; }
+  padding: 100px 15px; }
   .evidence-head__title {
     font-size: 50px;
     font-weight: 600;
@@ -468,3 +470,7 @@ a {
     .footer-content__text {
       width: 800px;
       text-align: center; }
+
+@media screen and (min-width: 1060px) {
+  .nav-wrapper--sm {
+    display: flex; } }

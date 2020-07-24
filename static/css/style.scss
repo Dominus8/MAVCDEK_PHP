@@ -36,6 +36,7 @@ a {
     .section-inner {
         width: 1200px;
         .header-wrapper {
+            padding: 0 15px 0 15px;
             height: 90px;
             display: flex;
             justify-content: space-between;
@@ -49,7 +50,9 @@ a {
             &__item {
                 padding: 0 10px;
             }
+
         }
+        
         .header-wrapper__number {
             .number-wrapper {
                 display: flex;
@@ -85,6 +88,7 @@ a {
 }
 
 .mine-wrapper-title {
+    padding-left: 15px;
     .main-wrapper-title__suptitle {
         font-size: 30px;
         font-weight: 600;
@@ -103,6 +107,7 @@ a {
 }
 
 .mine-wrapper-button {
+    padding-left: 15px;
     padding-top: 20px;
     z-index: 0;
 }
@@ -112,7 +117,7 @@ a {
 .advantages-wrapper {
     overflow: auto;
     height: 770px;
-    padding: 80px 0;
+    padding: 80px 15px;
     &-head {
         //padding: 40px 0px;
         &__title {
@@ -147,7 +152,7 @@ a {
 
 //=============================== price =======================
 .price {
-    padding: 100px 0;
+    padding: 100px 15px;
     background-color: #f2f9f2;
 }
 
@@ -233,7 +238,7 @@ a {
 
 //=============================== price =======================
 .calc {
-    padding: 100px 0;
+    padding: 100px 15px;
     background-color: #f2f9f2;
 }
 
@@ -429,7 +434,7 @@ a {
 
 //=============================== evidence =======================
 .evidence {
-    padding: 100px 0;
+    padding: 100px 15px;
     &-head {
         //padding-bottom: 60px;
         &__title {
@@ -651,3 +656,11 @@ a {
             }
         }
     }
+
+//===========================adaptive====================================
+@media screen and (min-width: 1060px) {
+
+    .nav-wrapper--sm{
+        display: flex;
+    }
+  }

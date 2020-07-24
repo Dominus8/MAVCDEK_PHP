@@ -38,6 +38,17 @@
                             <div class="nav-wrapper__item"><a href="#menu_evidence">Факты о СДЭК</a></div>
                             <div class="nav-wrapper__item"><a href="#menu_partners">Партнеры</a></div>
                         </div>
+
+                        <div class="nav-wrapper--sm dropdown-trigger">
+                            <div class="nav-wrapper__item"><a href="#">"Посылка"</a></div>
+                            <div class="nav-wrapper__item"><a href="#menu_advantages">Преимущества</a></div>
+                            <div class="nav-wrapper__item"><a href="#menu_price">Тарифы</a></div>
+                            <div class="nav-wrapper__item"><a href="#menu_calc">Калькулятор</a></div>
+                            <div class="nav-wrapper__item"><a href="#menu_evidence">Факты о СДЭК</a></div>
+                            <div class="nav-wrapper__item"><a href="#menu_partners">Партнеры</a></div>
+                        </div>
+
+
                     </div>
                     <div class="header-wrapper__number">
                         <div class="number-wrapper">
@@ -626,6 +637,19 @@
                 modal.style.display = "none";
             }
         });
+    </script>
+
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
     </script>
 
 </body>
