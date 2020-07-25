@@ -671,12 +671,96 @@
                                                         }
                                                     }
                                                     
-                                                    //===========================adaptive====================================
+//===========================adaptive====================================
                                                     @media only screen and (max-width: 1075px) {
                                                         .nav-wrapper {
                                                             display: none !important;
                                                         }
                                                         .nav-wrapper-sm {
                                                             display: flex !important;
+                                                        }
+                                                    }
+
+                                                    @media only screen and (max-width: 375px) {
+                                                        .header-wrapper{
+                                                            padding:5px 0 !important;
+                                                            flex-direction: column-reverse;
+
+                                                            
+                                                            .header-whapper__logo{
+                                                                display: none;
+                                                            }
+                                                            .number-wrapper{
+                                                                line-height: 20px;
+                                                            }
+                                                        }
+                                                        .nav-wrapper {
+                                                            display: none !important;
+                                                        }
+                                                        .nav-wrapper-sm {
+                                                            display: flex !important;
+                                                            
+                                                        }
+
+                                                        .mine-wrapper{
+                                                            background-color: grey;
+                                                        }
+                                                        //=============Тарифы===================
+
+                                                        //=============Калькулятор===================
+                                                        .calc-content{
+                                                            height: 1850px;
+                                                        }
+                                                        .value__conditions-wrapper-head {
+                                                            font-size: 14px;
+                                                        }
+
+                                                        .result__head {
+                                                            font-size: 15px;
+                                                            line-height: 28px;
+                                                        }
+
+                                                        .calc-content-items{
+                                                            
+                                                            flex-direction: column;
+                                                            &__form{
+                                                                width: 100%;
+                                                                padding-bottom: 9px;
+                                                            }
+                                                            &__value{
+
+                                                                padding-top: 5px;
+                                                                width: 100%;
+                                                                // font-size: 0.92em;
+                                                                height: 650px;
+
+                                                            }
+                                                            &__desc{
+                                                                padding-top: 5px;
+                                                                width: 100%;
+                                                            }
+                                                        }
+
+                                                        .calc-content-items__value-wrapper {
+                                                            justify-content: space-between;
+                                                        }
+                                                        .value__conditions-wrapper-item-left{
+                                                            padding-left: 5px !important;
+                                                            font-size: 14px;
+
+                                                        }
+                                                        .value__conditions-wrapper-item-right {
+                                                            .value__conditions-wrapper-item-right-option{
+                                                                padding-left: 3px;
+                                                                
+                                                                font-size: 12px;
+                                                                margin: 0.55em 0;
+                                                            }
+
+                                                        }
+
+                                                        .result__value {
+                                                            
+                                                            
                                                         }
                                                     }
