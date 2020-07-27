@@ -497,7 +497,7 @@ a {
   .nav-wrapper-sm {
     display: flex !important; } }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1075px) {
   .header-wrapper {
     padding: 5px 0 !important;
     flex-direction: column-reverse; }
