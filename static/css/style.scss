@@ -81,6 +81,9 @@
                                                         justify-content: center;
                                                         align-items: flex-start;
                                                         background: url(../src/bg.png) no-repeat 100% 100%;
+                                                        .adapt_logo{
+                                                            display: none;
+                                                        }
                                                     }
                                                     
                                                     //===============================mine=======================
@@ -91,8 +94,12 @@
                                                     .mine-wrapper-title {
                                                         padding-left: 15px;
                                                         .main-wrapper-title__suptitle {
+                                                            
                                                             font-size: 30px;
                                                             font-weight: 600;
+                                                            span{
+                                                                white-space: nowrap;
+                                                            }
                                                         }
                                                         .main-wrapper-title__title {
                                                             color: #689f38;
@@ -172,9 +179,14 @@
                                                     
                                                     .price-content {
                                                         display: grid;
-                                                        grid-template-columns: 30% 20% 20% 20%;
+                                                        //grid-template-columns: 30% 20% 20% 20%;
+                                                        grid-template-columns: 3fr 2fr 2fr 2fr;
+                                                        grid-column-gap: 20px;
+                                                        // grid-auto-flow: column;
                                                         grid-template-rows: 60px;
                                                         justify-content: space-around;
+                                                        
+
                                                         &__item {
                                                             .item__head {
                                                                 height: 60px;
@@ -620,9 +632,8 @@
                                                             align-items: center;
                                                             &-wrapper {
                                                                 display: grid;
-                                                                grid-template-columns: 25% 25% 25% 25%;
-                                                                grid-template-rows: 100px 100px;
-                                                                //justify-content: space-around;
+                                                                grid-template-columns: repeat(4, 1fr);
+
                                                                 &__item {
                                                                     padding: 10px;
                                                                 }
@@ -671,7 +682,7 @@
                                                         }
                                                     }
                                                     
-//===========================adaptive====================================
+                                    //===========================adaptive====================================
                                                     @media only screen and (max-width: 1075px) {
                                                         .nav-wrapper {
                                                             display: none !important;
@@ -703,9 +714,115 @@
                                                         }
 
                                                         .mine-wrapper{
-                                                            background-color: grey;
+                                                            background-image: none;
+                                                        
+                                                            .adapt_logo{
+                                                                display: block;
+                                                                
+                                                                padding-left: 80px;
+                                                                padding-bottom: 50px;
+
+                                                                img{
+                                                                    right: 0;
+                                                                }
+                                                            }
                                                         }
                                                         //=============Тарифы===================
+                                                        .price{
+                                                            padding-left: 35px;
+                                                            padding-bottom: 0px;
+                                                        }
+                                                        .price-content {
+                                                            display: grid;
+                                                            //grid-template-columns: 30% 20% 20% 20%;
+                                                            grid-template-columns: 140px 75px 75px 75px;
+                                                            grid-column-gap: 0;
+                                                            // grid-auto-flow: column;
+                                                            grid-template-rows: 60px;
+                                                            justify-content: space-around;
+                                                            
+                                                            
+    
+                                                            &__item {
+                                                                font-size: 12px;
+                                                                .item__head {
+                                                                    width: 55px;
+                                                                    height: 60px;
+                                                                    color: white;
+                                                                    background-color: green;
+                                                                    text-align: center;
+                                                                    border-radius: 10px 10px 0 0;
+                                                                    margin: 0 10px;
+                                                                    padding-top: 10px;
+                                                                    font-size: 9px;
+                                                                    
+                                                                    font-stretch: condensed;
+                                                                    span{
+                                                                        display: none;
+                                                                    }
+                                                                }
+                                                                .item__x-ico {
+                                                                    background-color: white;
+                                                                    text-align: center;
+                                                                    margin: 0 10px;
+                                                                    padding: 8px 0;
+                                                                    border-radius: 0;
+                                                                    box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                                    img {
+                                                                        height: 25px;
+                                                                        width: 25px;
+                                                                    }
+                                                                }
+                                                                .item__v-ico {
+                                                                    background-color: white;
+                                                                    border-radius: 10px 10px 0 0;
+                                                                    text-align: center;
+                                                                    margin: 0 10px;
+                                                                    padding: 8px 0;
+                                                                    border-radius: 0;
+                                                                    box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                                    img {
+                                                                        height: 25px;
+                                                                        width: 25px;
+                                                                    }
+                                                                }
+                                                                .item__v-ico--green {
+                                                                    box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
+                                                                }
+                                                                .item_text {
+                                                                    height: 40px;
+                                                                    line-height: 35px;
+                                                                    font-size: 11px;
+                                                                    line-height: 16px;
+                                                                    font-weight: 600;
+                                                                    border-bottom: 1px solid silver;
+                                                                }
+                                                            }
+                                                            .request {
+                                                                margin: 0 10px;
+                                                                padding-top: 10px;
+                                                                height: 60px;
+                                                                text-align: center;
+                                                                color: slategrey;
+                                                                background-color: white;
+                                                                box-shadow: 15px 0 20px -20px grey inset, -15px 0 20px -20px grey inset;
+                                                                border-radius: 0 0 10px 10px;
+                                                            }
+                                                            .request--green {
+                                                                box-shadow: 20px 0 20px -20px green inset, -20px 0 20px -20px green inset;
+                                                            }
+                                                            .btn-success{
+                                                                font-size: 0px;
+                                                                
+                                                                background: rgba(241, 252, 234, 0) url(/static/src/5.png) no-repeat center center;
+                                                                height: 40px;
+                                                                width: 55px;
+                                                                border: none;
+                                                            }
+                                                        }
+
+
+
 
                                                         //=============Калькулятор===================
                                                         .calc-content{
@@ -758,9 +875,104 @@
                                                             }
 
                                                         }
+                                //=======================================================================================
 
-                                                        .result__value {
-                                                            
-                                                            
+
+                                                        .evidence{
+                                                            &-head{
+
+                                                            }
+                                                            &-content{
+                                                                &-wrapper{
+                                                                    flex-direction: column;
+                                                                    
+                                                                    width: 100%;
+                                                                    
+                                                                    &__item1{
+                                                                        
+                                                                        width: 100%;
+                                                                        &-head{
+                                                                            padding: 0;
+                                                                            &-title{
+
+                                                                            }
+                                                                            &-subtitle{
+
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    &__item2{
+                                                                        
+                                                                        width: 100%;
+                                                                        &-head{
+                                                                            padding: 0;
+                                                                            &-title{
+
+                                                                            }
+                                                                            &-subtitle{
+
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    &__item3{
+                                                                        
+                                                                        width: 100%;
+                                                                        &-head{
+                                                                            padding: 0;
+                                                                            &-title{
+
+                                                                            }
+                                                                            &-subtitle{
+
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    &__item4{
+                                                                        
+                                                                        width: 100%;
+                                                                        &-head{
+                                                                            padding: 0;
+                                                                            &-title{
+
+                                                                            }
+                                                                            &-subtitle{
+
+                                                                            }
+                                                                        }
+                                                                    }
+
+
+                                           
+                                                                }
+                                                            }
                                                         }
+                                                        .partners{
+                                                            height: 700px;
+                                                        }
+                                                        .partners-head__title{
+                                                            line-height: 55px;
+                                                        }
+                                                        .partners-content-wrapper{
+                                                           grid-template-columns: repeat(2, 1fr); 
+                                                        }
+                                                        .footer-top-wrapper{
+                                                            flex-direction: column;
+                                                        }
+                                                        .footer-top-wrapper__item--coll{
+                                                            padding-bottom: 10px;
+                                                        }
+                                                        .footer-top-wrapper__item{
+                                                            padding-bottom: 10px;
+                                                            img{
+                                                                display: none;
+                                                            }
+                                                        }
+                                                        .footer-content__text{
+                                                            width: 360px;
+                                                        }
+
+                                                        
                                                     }
