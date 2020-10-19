@@ -10,7 +10,44 @@
 
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <link type="text/css" href="/include/jquery-ui-1.8.21.custom.css" rel="stylesheet" />
+    <script src="/include/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="/include/jquery-ui-1.8.21.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        /**
+         * подтягиваем список городов ajax`ом, данные jsonp в зависмости от введённых символов
+         */
+        $(function() {
+          $("#city_in").autocomplete({
+            source: function(request,response) {
+              $.ajax({
+                url: "http://api.cdek.ru/city/getListByTerm/jsonp.php?callback=?",
+                dataType: "jsonp",
+                data: {
+                    q: function () { return $("#city").val() },
+                    name_startsWith: function () { return $("#city").val() }
+                },
+                success: function(data) {
+                  response($.map(data.geonames, function(item) {
+                    return {
+                      label: item.name,
+                      value: item.name,
+                      id: item.id
+                    }
+                  }));
+                }
+              });
+            },
+            minLength: 1,
+            select: function(event,ui) {
+                console.log("Yep!");
+                $('#receiverCityId').val(ui.item.id);
+            }
+          });
+          
+        });
+        </script>
 </head>
 
 <body>
@@ -328,28 +365,11 @@
 
                                         <div class="form-content__city-out">
                                             <label for="city_out">Город отправителя:</label>
-                                            <!-- <autocomplete
-                                                name="city_out"
-                                                v-model="sending.cityOut"
-                                                :search="searchCities"
-                                                :get-result-value="getResultValue"
-                                                placeholder="Введите город"
-                                                aria-label="Search for a country"                                            
-                                            ></autocomplete> -->
                                             <input name="city_out" class="form-control" type="text" placeholder="Введите город">
                                         </div>
 
                                         <div class="form-content__city-in">
                                             <label for="city_in">Город получателя:</label>
-                                            <!-- <autocomplete
-                                                name="city_in"
-                                                v-model="sending.cityIn"
-                                                :search="searchCities"
-                                                :get-result-value="getResultValue"
-                                                placeholder="Введите город"
-                                                aria-label="Search for a country"                                            
-                                            ></autocomplete>  
-                                                                                   -->
                                             <input name="city_in" type="text" class="form-control" placeholder="Введите город">
                                         </div>
 
